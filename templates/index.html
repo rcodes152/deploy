@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home - Rasha's Company{% endblock %}
+
+{% block content %}
+<section class="mb-5">
+  <div id="lipstickCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/ashley-piszek-crSkE1CKQL0-unsplash.jpg' %}" class="d-block w-100" alt="Lipstick 1" style="height: 60vh; object-fit: cover;">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/cesar-la-rosa-sGZwj1Nmq8s-unsplash.jpg' %}" class="d-block w-100" alt="Lipstick 2" style="height: 60vh; object-fit: cover;">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/peter-kalonji-5eqZUR08qY8-unsplash.jpg' %}" class="d-block w-100" alt="Lipstick 3" style="height: 60vh; object-fit: cover;">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#lipstickCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#lipstickCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+<section class="container mb-5">
+  <h2 class="text-danger text-center">Our Lipsticks</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card text-center mb-4">
+        <img src="{% static 'images/huda.avif' %}" class="card-img-top" alt="Lipstick 1" style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">MAYBELLINE</h5>
+          <a href="{% url 'lipsticks' %}" class="btn btn-danger">View Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center mb-4">
+        <img src="{% static 'images/mac.png' %}" class="card-img-top" alt="Lipstick 2" style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">MAC</h5>
+          <a href="{% url 'lipsticks' %}" class="btn btn-danger">View Details</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center mb-4">
+        <img src="{% static 'images/huda.avif' %}" class="card-img-top" alt="Lipstick 3" style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">HUDA BEAUTY</h5>
+          <a href="{% url 'lipsticks' %}" class="btn btn-danger">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mb-5">
+  <h2 class="text-danger text-center">About Us</h2>
+  <p class="text-center">Learn more about our company and our dedicated team who strive to bring you the best in beauty.</p>
+</section>
+
+<section class="mb-5">
+  <h2 class="text-danger text-center">Contact Us</h2>
+  <p class="text-center">Get in touch with us for more information or inquiries.</p>
+</section>
+{% endblock %}
